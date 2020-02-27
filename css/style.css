@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*padding and margin no longer added for measurements*/
+}
+
+body{
+    font-family: 'Open Sans', ;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgb(48, 48, 48);
+    padding: 30px;
+
+}
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right, rgba(207, 183, 255, 0.2), rgba(51, 100, 141, 0.2)), url(../images/main_background.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.text-box{
+    position: absolute;
+
+    top: 45%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary{
+    font-family: 'Fredericka the Great' ;
+
+
+    color: rgba(255, 255, 255, 0.87);
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    background-size: cover;
+    background-position: top;
+}
+
+.heading-primary-main{
+    display: block;
+
+    font-size: 70px;
+    font-weight: 100;
+    letter-spacing: 16px;
+
+    animation-name: MoveToRight;
+    animation-duration: 2s;
+    transition: ease-in;
+}
+
+.heading-primary-sub{
+    display: block;
+
+    font-size: 60px;
+    font-weight: 100;
+    letter-spacing: 11px;
+
+    animation-name: MoveToLeft;
+    animation-duration: 2s;
+}
+
+@keyframes MoveToRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes MoveToLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
