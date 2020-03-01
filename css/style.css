@@ -14,10 +14,12 @@ body{
 
 }
 
+/* HEADER ________________________________*/
+
 .header{
     position: relative;
 
-    height: 95vh;
+    height: 100vh;
     background-image: linear-gradient(to right, rgba(207, 183, 255, 0.2), rgba(51, 100, 141, 0.2)), url(../images/main_background.jpg);
     background-size: cover;
     background-position: top;
@@ -40,9 +42,6 @@ body{
     color: rgba(255, 255, 255, 0.87);
     text-transform: uppercase;
     line-height: 1.2;
-
-    background-size: cover;
-    background-position: top;
 
     transition: all 2s;
 }
@@ -71,28 +70,44 @@ body{
     animation-duration: 2s;
 }
 
-@keyframes MoveToRight{
-    0%{
-        opacity: 0;
-        transform: translateX(-50%);
-    }
+.heading-primary-email{
+    display: block;
 
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
+    font-size: 11px;
+    font-weight: 100;
+    letter-spacing: 1.2px;
+
+    animation-name: MoveToTop;
+    animation-duration: 3s;
 }
 
-@keyframes MoveToLeft{
-    0%{
-        opacity: 0;
-        transform: translateX(50%);
-    }
+.creator-box{
+    position: absolute;
 
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
+    top: 45.8%;
+    left: 42%;
+
+    transform: translate(-50%, -50%);
+}
+
+.heading-creator{
+    font-family: 'Fredericka the Great' ;
+    color: white;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+
+}
+
+.heading-creator-email{
+    display: inline-block;
+
+    font-weight: 400;
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    animation-name: MoveToLeft;
+    animation-duration: 3s;
 }
 
 .mouse-box{
@@ -133,3 +148,141 @@ ion-icon{
 .arrow-icon:hover{
     margin-left: 50%;
 }
+/* END HEADER ________________________________*/
+
+/* SECTION ABOUT ________________________________*/
+    .section-about{
+        background-color: rgba(255, 225, 255, 0.664);
+        padding: 5rem 0;
+        height: 100vh;
+    }
+
+    .u-center-text{text-align: center;}
+    .u-margin-8{margin-bottom: 8rem;}
+
+    .heading-secondary{
+
+        display: inline-block;
+
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        letter-spacing: 3px;
+
+        color: rgba(0, 0, 0, 0);
+
+        background-image: linear-gradient(to right, rgba(207, 183, 255, 0), rgba(51, 101, 141, 0)), url(../images/blue_soap.jpg);
+        background-size: cover;
+        background-position: 1px 500px;
+
+        -webkit-background-clip: text;
+
+        transition: all 0.4s ease-in-out;
+    }
+
+    .heading-secondary:hover{
+        letter-spacing: 7px;
+    }
+
+
+    .heading-tertiary{
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .paragraph{
+        font-size: 1.1rem;
+    }
+
+    .paragraph:not(.paragraph:last-child){
+        margin-bottom: 3rem;
+    }
+
+/* END SECTION ABOUT ________________________________*/
+
+
+/* ANIMATIONS ________________________________*/
+@keyframes MoveToRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes MoveToLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes MoveToTop{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes MoveToBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* END ANIMATIONS ________________________________*/
+
+
+
+/* GRID _________________ */
+.grid-section-about{
+    display: grid;
+    height: 100%;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 1fr;
+
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.grid-item{
+    font-size: 13px;
+    color: black;
+}
+
+.grid-item--1{
+
+}
+
+.grid-item--2{
+
+}
+
+.grid-item--3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+/* END GRID ______________ */
