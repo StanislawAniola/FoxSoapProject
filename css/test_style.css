@@ -15,7 +15,7 @@ html{
 
 body{
     font-family: 'Open Sans';
-    color: rgb(238, 238, 238);
+    color: black;
     font-weight: 400;
     line-height: 1.6;
 }
@@ -25,45 +25,107 @@ body{
 .container{
     display: grid;
 
-    grid-template-rows: 100vh 40vw min-content min-content min-content;
-    grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+    grid-template-rows: 80vh min-content 40vw min-content min-content min-content;
+    grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
 }
+
+/*
+.container>*{
+    padding: 40px;
+    font-size: 3rem;
+}
+*/
+
 /* END MAIN CONTAINER GRID__________________________ */
 
-/* SECTION HEADER____________________________ */
+/* SECTION SIDEBAR____________________________ */
+.sidebar{
+    background-color: violet;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: -1;
+}
+/*END SECTION SIDEBAR____________________________ */
+
+/* SECTION HEADER _____________________________ */
 .header{
     background-color: tomato;
+
+    grid-column-start: 2;
+    grid-column-end: 9;
 }
 /* END SECTION HEADER________________________ */
 
-/* SECTION ABOUT____________________________ */
-.about{
+/* SECTION RELATORS ____________________________ */
+.relators{
+    background-color: chocolate;
 
+    grid-column-start: 9;
+    grid-column-end: -1;
 }
+/* END SECTION RELATORS ____________________________ */
 
-.about__pictures{
-    background-color: thistle;
+/* SECTION FEATURES ____________________________ */
+.features{
+    margin: 15rem 0;
+
+    grid-column-start: 3;
+    grid-column-end: -2;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+
+    grid-gap: 6rem;
 }
+/* END SECTION FEATURES ____________________________ */
 
-.about__content{
-    background-color: palegoldenrod;
-}
-/* END SECTION ABOUT____________________________ */
-
-/* SECTION SOAP____________________________ */
-.soap{
+/* SECTION STORY ____________________________ */
+.story{
     background-color: turquoise;
 }
-/* END SECTION SOAP____________________________ */
+
+.story__pictures{
+    background-color: lightcoral;
+
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.story__content{
+    background-color: mistyrose;
+
+    grid-column-start: 5;
+    grid-column-end: -1;
+}
+/* END SECTION STORY ____________________________ */
+
+/* SECTION HOMES ____________________________ */
+.homes{
+    background-color: lightseagreen;
+
+    grid-column-start: 3;
+    grid-column-end: -2;
+}
+/* END SECTION HOMES ____________________________ */
 
 /* SECTION GALLERY____________________________ */
 .gallery{
     background-color: wheat;
+
+    grid-column-start: 2;
+    grid-column-end: -1;
 }
 /* END SECTION GALLERY____________________________ */
 
 /* SECTION FOOTER____________________________ */
 .footer{
     background-color: yellowgreen;
+
+    grid-column-start: 2;
+    grid-column-end: -1;
 }
 /* END SECTION FOOTER____________________________ */
