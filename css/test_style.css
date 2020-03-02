@@ -1,0 +1,69 @@
+/* PRESETUP_________________________________ */
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px (10px = 0.625rem)*/
+}
+
+body{
+    font-family: 'Open Sans';
+    color: rgb(238, 238, 238);
+    font-weight: 400;
+    line-height: 1.6;
+}
+/* END PRESETUP_________________________________  */
+
+/* MAIN CONTAINER GRID__________________________ */
+.container{
+    display: grid;
+
+    grid-template-rows: 100vh 40vw min-content min-content min-content;
+    grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+}
+/* END MAIN CONTAINER GRID__________________________ */
+
+/* SECTION HEADER____________________________ */
+.header{
+    background-color: tomato;
+}
+/* END SECTION HEADER________________________ */
+
+/* SECTION ABOUT____________________________ */
+.about{
+
+}
+
+.about__pictures{
+    background-color: thistle;
+}
+
+.about__content{
+    background-color: palegoldenrod;
+}
+/* END SECTION ABOUT____________________________ */
+
+/* SECTION SOAP____________________________ */
+.soap{
+    background-color: turquoise;
+}
+/* END SECTION SOAP____________________________ */
+
+/* SECTION GALLERY____________________________ */
+.gallery{
+    background-color: wheat;
+}
+/* END SECTION GALLERY____________________________ */
+
+/* SECTION FOOTER____________________________ */
+.footer{
+    background-color: yellowgreen;
+}
+/* END SECTION FOOTER____________________________ */
