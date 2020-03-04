@@ -75,31 +75,30 @@ body{
     grid-column-start: 3;
     grid-column-end: -2;
 
-    /* grid in grid */
+    /* nested grid */
     display: grid;
-    
     /*grid-template-columns: repeat(3, 1fr);*/
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-template-rows: auto auto;
 
-    grid-column-gap: 2.5rem;
-    grid-row-gap: 1.5rem;
+    grid-gap: 6rem;
 
     align-items: start;
 }
 
-.feature {
+.feature{
     display: grid;
 
     grid-template-columns: min-content 1fr;
     grid-template-rows: auto auto;
 
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2.5rem;
 }
 
 .feature__icon{
-    fill: peru;
+    fill: black;
+
     width: 4.5rem;
     height: 4.5rem;
 
@@ -108,56 +107,47 @@ body{
 
     grid-row-start: 1;
     grid-row-end: 3;
-}
 
-.feature__text{
-    font-size: 1.7rem;
-
-    grid-column-start: 2;
-    grid-column-end: 3;
-
-    grid-row-start: 2;
-    grid-row-end: 3;
-
-    align-self: flex-start;
-}
-
-.feature_test{
-    font-size: 1.7rem;
-    writing-mode:sideways-lr;
-
-    transform: translateX(2rem);
-
-    align-self: center;
-
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.test{
-    text-transform: uppercase;
+    transform: translateY(-1rem);
 }
 /* END SECTION FEATURES ____________________________ */
 
 /* SECTION STORY ____________________________ */
-.story{
-    background-color: turquoise;
-    
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-
-    padding-left: 12rem;
-    padding-right: 12rem;
-}
 
 .story__pictures{
     background-color: lightcoral;
 
     grid-column-start: 2;
     grid-column-end: 7;
+
+    display: grid; /*nested grid*/
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    align-items: center;
+}
+
+.story__img--1{
+    width: 100%;
+
+    grid-column-start: 2;
+    grid-column-end: 6;
+
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+
+.story__img--2{
+    width: 115%;
+
+    grid-column-start: 4;
+    grid-column-end: 7;
+
+    grid-row-start: 4;
+    grid-row-end: 6;
+    
+    z-index: 20;
 }
 
 .story__content{
@@ -165,6 +155,25 @@ body{
 
     grid-column-start: 7;
     grid-column-end: -1;
+
+    padding: 6rem 8vw; /* top bottom - left right */
+
+    display: grid;
+    align-content: center;
+    justify-items: start;
+
+    /*
+    display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+    align-items: flex-start;
+    */
+}
+
+.story__text{
+    font-size: 1.5rem;
+    font-style: italic;
 }
 /* END SECTION STORY ____________________________ */
 
@@ -195,71 +204,68 @@ body{
 }
 /* END SECTION FOOTER____________________________ */
 
-
-/* TYPOGRAPHY ___________________________*/
-.heading-1{
-    font-family: 'Caladea', serif;
-    font-weight: 400;
-}
-
-.heading-2{
-    font-family: 'Caladea', serif;
-    font-weight: 400;
-    font-size: 4rem;
-
-    line-height: 1;
-}
-
-.heading-3{
-    font-family: 'Caladea', serif;
-    font-weight: 400;
-    font-size: 1.6rem;
-
-    text-transform: uppercase;
-}
-
-.heading-4{
-    font-family: 'Caladea', serif;
-    font-weight: 400;
-    font-size: 1.9rem;
-}
-
-    /* TYPO COLOR VARIANTS */
-
-    .heading-2--light{
-        color: rgb(51, 51, 51);
-    }
-
-    .heading-2--dark{
-        color: black;
-    }
-
-    .heading-4--light{
-        color: rgb(51, 51, 51);
-    }
-
-    .heading-4--dark{
-        color: black;
-    }
-    /* END TYPO COLOR VARIANT*/
-
-    /* BUTTONS */
-    .btn-nexter{
-        background-color: cornflowerblue;
-
-        border: none;
-        border-radius: 0;
-
-        padding: 1.8rem 3rem;
-
+/* TYPOGRAPHY */
+    .heading-1{
         font-family: 'Caladea', serif;
-        font-size: 1.5rem;
-        
-        color: black;
-        text-transform: uppercase;
-
-        cursor: pointer;
+        font-weight: 400;
     }
-    /* END BUTTONS */
 
-/* END TYPOGRAPHY ___________________________ */
+    .heading-2{
+        font-family: 'Caladea', serif;
+        font-weight: 400;
+        font-size: 4rem;
+
+        line-height: 1;
+    }
+
+    .heading-3{
+        font-family: 'Caladea', serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+
+        color: black;
+
+        text-transform: uppercase;
+    }
+
+    .heading-4{
+        font-family: 'Caladea', serif;
+        font-weight: 400;
+        font-size: 1.9rem;
+    }
+
+    /* COLOR VARIANTS */
+    .heading--dark{
+        color: black;
+    }
+ 
+    .heading--light{
+        color: rgb(41, 41, 41);
+    }
+    /* COLOR VARIANTS END */
+/* END TYPOGRAPHY */
+
+/* BUTTONS */
+.btn-nexter{
+    padding: 1.8rem 3rem;  /* top bottom - left right */
+
+    border: none;
+    border-radius: 0;
+
+    background-color: indigo;
+
+    font-family: 'Caladea', serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: beige;
+
+    cursor: pointer;
+}
+/* END BUTTONS */
+
+/* MARGIN BOTTOM */
+.mb-sm{margin-bottom: 2rem;}
+.mb-md{margin-bottom: 3rem;}
+.mb-lg{margin-bottom: 4rem;}
+.mb-hg{margin-bottom: 8rem;}
+/* END MARGIN BOTTOM */
