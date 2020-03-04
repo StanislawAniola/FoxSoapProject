@@ -115,7 +115,7 @@ body{
 /* SECTION STORY ____________________________ */
 
 .story__pictures{
-    background-color: lightcoral;
+    background-image: linear-gradient(rgba(255, 192, 203, 0.7), rgba(255, 91, 118, 0.582)), url(../img_nexter/back.jpg);
 
     grid-column-start: 2;
     grid-column-end: 7;
@@ -136,6 +136,8 @@ body{
 
     grid-row-start: 2;
     grid-row-end: 6;
+
+    box-shadow: 0 2rem 5rem black;
 }
 
 .story__img--2{
@@ -148,6 +150,8 @@ body{
     grid-row-end: 6;
     
     z-index: 20;
+
+    box-shadow: 0 2rem 5rem black;
 }
 
 .story__content{
@@ -179,10 +183,119 @@ body{
 
 /* SECTION HOMES ____________________________ */
 .homes{
-    background-color: lightseagreen;
+    background-color: rgb(200, 170, 255);
+
+    margin: 15rem 0;
 
     grid-column-start: 3;
     grid-column-end: -2;
+
+    display: grid; /* nested grid */
+
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: auto auto;
+
+    grid-column-gap: 7rem;
+    grid-row-gap: 7rem;
+
+    align-content: center;
+}
+
+.home{
+    background-color: rgb(255, 210, 240);
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+
+    grid-row-gap: 3.5rem;
+}
+
+.home__img{
+    width: 100%;
+
+    z-index: 2;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    justify-self: end;
+
+}
+
+.home__like{
+    fill: black;
+    height: 2.5rem;
+    width: 2.5rem;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    margin: 1rem;
+
+}
+
+.heading__home_name{
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    width: 80%;
+
+    justify-self: center; /* works horizontally */
+    align-self: end; /* works vertically */
+    text-align: center;
+
+    padding: 1.25rem;
+    background-color: blue;
+
+    transform: translateY(50%); /* 50% of item slef height */
+
+    z-index: 2;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.home__location, .home__rooms{
+    margin-top: 2.5rem;
+}
+
+.home__location, .home__rooms, 
+.home__area, .home__price{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.home__svg{
+    fill: black;
+    height: 2rem;
+    width: 2rem;
+
+    margin-right: 1rem;
+}
+
+.btn__home{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.home__button{
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 /* END SECTION HOMES ____________________________ */
 
