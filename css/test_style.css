@@ -163,6 +163,9 @@ body{
     padding: 6rem 8vw; /* top bottom - left right */
 
     display: grid;
+
+    grid-template-columns: 1fr;
+
     align-content: center;
     justify-items: start;
 
@@ -175,9 +178,22 @@ body{
     */
 }
 
+.story__title{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.story__desc{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
 .story__text{
     font-size: 1.5rem;
     font-style: italic;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 /* END SECTION STORY ____________________________ */
 
