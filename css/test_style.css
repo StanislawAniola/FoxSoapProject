@@ -47,15 +47,106 @@ body{
 
     grid-row-start: 1;
     grid-row-end: -1;
+
+    display: flex;
+    justify-content: center;
 }
+
+.btn-sidebar{
+    margin-top: 4rem;
+
+    border: none;
+    border-radius: 0;
+
+    background-color: aliceblue;
+    height: 0.2rem;
+    width: 4.5rem;    
+}
+
+.btn-sidebar::before,
+.btn-sidebar::after{
+    display: block;
+    content: "";
+    
+    background-color: aliceblue;
+    height: 0.2rem;
+    width: 4.5rem; 
+}
+
+.btn-sidebar::before{transform: translateY(-1.5rem);}
+.btn-sidebar::after{transform: translateY(1.3rem);}
 /*END SECTION SIDEBAR____________________________ */
 
 /* SECTION HEADER _____________________________ */
 .header{
-    background-color: tomato;
+    background-image: linear-gradient(rgba(158, 117, 255, 0.4), rgba(225, 192, 255, 0.2)), url(../img-nexter/hero.jpg);
+    background-size: cover;
+    background-position: center;
+
+    padding: 8rem;
+    padding-top: 4rem;
 
     grid-column-start: 2;
     grid-column-end: 9;
+
+    display: grid; /* nested grid */
+
+    grid-template-columns: max-content;
+    grid-template-rows: 1fr min-content 6rem 1fr;
+
+    grid-row-gap: 1.5rem;
+
+    justify-content: center;
+
+}
+
+.header__logo{
+    height: 3rem;
+
+    justify-self: center;
+}
+
+.btn-header{
+    align-self: start;
+    justify-self: start;
+}
+
+.header__seanon-text{
+    font-size: 1.6rem;
+    color: rgb(0, 117, 117);
+
+    display: grid;
+    
+    grid-template-columns: 1fr max-content 1fr;
+
+    grid-column-gap: 1.5rem;
+
+    align-items: center;
+}
+
+.header__seanon-text::before,
+.header__seanon-text::after{
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: rgb(68, 57, 40);
+}
+
+
+.header__seanon-logos{
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    
+    grid-column-gap: 3rem;    
+
+    justify-items: center;
+
+}
+
+.seanon-logos-img{
+    height: 2.5rem;
+    filter: brightness(70%);
 }
 /* END SECTION HEADER________________________ */
 
@@ -339,10 +430,10 @@ body{
 
 .gallery_img{
     display: block;
+    object-fit: cover;
 
     height: 100%;
     width: 100%;
-    object-fit: cover;
 }
 
 .gallery__item--1{
@@ -478,6 +569,11 @@ body{
     .heading-1{
         font-family: 'Caladea', serif;
         font-weight: 400;
+        font-size: 4.5rem;
+
+        color: azure;
+
+        line-height: 1;
     }
 
     .heading-2{
