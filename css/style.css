@@ -20,7 +20,7 @@ body{
     position: relative;
 
     height: 100vh;
-    background-image: linear-gradient(to right, rgba(207, 183, 255, 0.2), rgba(51, 100, 141, 0.2)), url(../images/main_background.jpg);
+    background-image: linear-gradient(rgba(207, 183, 255, 0.2), rgba(51, 100, 141, 0.2)), url(../images/main_background.jpg);
     background-size: cover;
     background-position: top;
 
