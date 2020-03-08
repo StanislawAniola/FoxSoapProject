@@ -14,6 +14,12 @@ $(".soap").each(function(index) {
 });
 */
 
+$(".mousearrow--A").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".about").offset().top
+    }, 2000);
+    return false;
+});
 
 $('.soap').fadeOut()
 $(document).scroll(function () {
