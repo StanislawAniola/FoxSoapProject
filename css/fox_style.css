@@ -37,6 +37,8 @@ body{
 .creator{
     font-family: 'Major Mono Display', monospace;
     font-size: 0.7rem;
+    
+    text-transform: lowercase;
 
     grid-column-start: 1;
     grid-column-end: -1;
@@ -56,6 +58,8 @@ body{
 
 .designer__box-name{
     letter-spacing: 1rem;
+
+    transform: translateY(1.5%);
 
     grid-column-start: 1;
     grid-column-end: 2;
@@ -226,6 +230,7 @@ body{
     }
 
     .mousearrow--A{
+        animation-delay: 2s;
         animation-name: rotateA;
         animation-duration: 10s;
         animation-iteration-count: infinite;
@@ -270,7 +275,7 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-template-rows: auto;
 
-    grid-column-gap: 7rem;
+    grid-column-gap: 6rem;
     grid-row-gap: 7rem;
 
 
@@ -285,10 +290,10 @@ body{
     display: grid;
 
     grid-template-columns: max-content 1fr;
-    grid-template-rows: 0.2fr 0.6fr 0.2fr 1fr;
+    grid-template-rows: min-content min-content min-content 1fr;
 
     grid-column-gap: 1rem;
-    grid-row-gap: 2rem;
+    grid-row-gap: 1rem;
 }
 
 .soap__name{
@@ -313,6 +318,9 @@ body{
 .soap__contactme{
     grid-column-start: 2;
     grid-column-end: 3;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
 
     display: grid;
 
@@ -347,7 +355,7 @@ body{
 
     font-family: 'Major Mono Display', monospace;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 100;
     color: black;
     text-transform: lowercase;
 
@@ -421,25 +429,30 @@ body{
 
 .soap__leftline--bordertop{
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: 3;
 
     border-right: 1px black solid;
     writing-mode: sideways-lr;
 
-    transform: translateX(-50%);
+    transform: translateX(-20%);
 }
 
 .soap__leftline--borderbot{
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
 
     border-right: 1px black solid;
     writing-mode: sideways-lr;
 
-    transform: translateX(-50%);
+    transform: translateX(-20%);
 }
 
 .soap__leftline--centertext{
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    transform: translateX(20%);
+
     font-size: 1.7rem;
     writing-mode: sideways-lr;
     line-height: 4rem;
