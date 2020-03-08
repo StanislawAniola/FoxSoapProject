@@ -26,7 +26,9 @@ body{
     display: grid;
 
     grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
-    grid-template-rows: 100vh min-content;
+    grid-template-rows: 100vh 100vh min-content;
+
+    grid-row-gap: 5rem;
 }
 
 /* END MAIN GRID CONTAINER */
@@ -34,8 +36,6 @@ body{
 /* SECTION HEADER */
 .header{
     background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)), url(../img_fox/header_background.jpg);
-    background-size: cover;
-    background-position: top;
 
     display: grid;
 
@@ -127,8 +127,8 @@ body{
 
     letter-spacing: 0.2rem;
 
-    text-orientation: sideways-right;
     writing-mode: sideways-lr;
+    writing-mode: vertical-rl;
 
     justify-self: start;
     align-self: end;
@@ -146,6 +146,22 @@ body{
 /* END SECTION HEADER */
 
 /* SECTION ABOUT */
+    .about{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        background-color: tomato;
+
+        display: grid; /*nested grid*/
+
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    
+        align-items: center;
+    }
 /* END SECTION HEADER */
 
 /* SECTION SOAPS */
@@ -154,6 +170,9 @@ body{
 
     grid-column-start: 2;
     grid-column-end: -2;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
 
     display: grid;
 
@@ -187,6 +206,7 @@ body{
 
     grid-column-start: 2;
     grid-column-end: 3;
+
 }
 
 .soap__description{
@@ -225,34 +245,54 @@ body{
     border-style: solid;
     border-radius: 0;
 
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
-    background-position: 55% 0%;
+    background-image: url(../img_fox/creation_left.jpg), url(../img_fox/creation_right.jpg);
+    background-repeat: no-repeat;
+    background-position: 260% 49%, -160% 49%;
+    background-size: 165%, 165%;
+
+    filter: grayscale(0);
 
     font-family: 'Stardos Stencil', regular;
     font-size: 1.2rem;
     color: black;
     text-transform: uppercase;
 
+    outline: none;
+    box-shadow: none;
+
     padding: 0.5rem 2rem;
 
     transition: all 1s ease-in-out;
+
+    z-index: -1;
+}
+
+.soap__contactme-btn{
+    content: "";
+    background-color: white;
+    z-index: 1;
 }
 
 .soap__contactme-btn:hover{
-    scale: 1.1;
-    background-image: url(../img_fox/creation.jpg);
+    transform: scale(1.1);
+    background-image: url(../img_fox/creation_left.jpg), url(../img_fox/creation_right.jpg);
     background-repeat: no-repeat;
-    background-position: 55% 50%;
-    background-size: 300%;
+    background-position: 175% 49%, -79% 49%;
+    background-size: 165%, 165%;
 
     border-color: transparent;
     color: transparent;
+
+    outline: none;
+    box-shadow: none;
 }
 
 .soap__contactme-btn:active{
+    transform: scale(1.05);
     filter: grayscale(1);
-    scale: 1.05;
     transition: all 0.3s;
+    outline: none;
+    box-shadow: none;
 }
 
 
@@ -313,13 +353,11 @@ body{
 
 /* SECTION OPINION */
 .opinion{
-    background-color: deepskyblue;
 }
 /* END SECTION OPINION */
 
 /* SECTION FOOTER */
 .footer{
-    background-color: rgb(128, 223, 255);
 }
 /* END SECTION FOOTER */
 
