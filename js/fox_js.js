@@ -24,7 +24,7 @@ $(".mousearrow--A").click(function() {
 $('.soap').fadeOut()
 $(document).scroll(function () {
     var y = $(this).scrollTop();
-    if (y > $(".about").height()) {
+    if (y > $(".about").height() - 100) {
         $('.soap').each(function(index,i)
         {
             $(this).delay(index * 200).fadeIn(3000);

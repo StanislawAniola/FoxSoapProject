@@ -27,8 +27,6 @@ body{
 
     grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
     grid-template-rows: 10vh 85vh 5vh 100vh min-content;
-
-    grid-row-gap: 5rem;
 }
 
 /* END MAIN GRID CONTAINER */
@@ -104,7 +102,7 @@ body{
 }
 
 .header__title{
-    transform: translateY(-15rem);
+    transform: translateY(-10rem);
 
     display: grid;
 
@@ -223,11 +221,11 @@ body{
         font-size: 2.5rem;
         font-weight: 400;
 
-        transform: translateY(-10rem) rotate(180deg);
         z-index: 10;
 
         display: grid;
     }
+
 
     .mousearrow--A{
         animation-delay: 2s;
@@ -237,6 +235,7 @@ body{
     }
 
     .mousearrow--A:hover{
+        text-transform: lowercase;
         cursor: pointer;
     }
 /* END MOUSEARROW */
@@ -260,6 +259,46 @@ body{
     }
 /* END SECTION HEADER */
 
+/* SOAP TITLE */
+.soap__box{
+    font-family: 'Major Mono Display', monospace;
+    
+    text-transform: uppercase;
+
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+    display: grid;
+
+    grid-template-columns: min-content min-content;
+    grid-template-rows: min-content;
+
+    justify-content: end;
+
+    z-index: 7;
+
+    line-height: initial;
+
+}
+
+.soap__box--1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+
+    align-self: center;
+
+    writing-mode: sideways-rl;
+    writing-mode: vertical-rl;
+}
+/* END SOAP TITLE */
+
+
 /* SECTION SOAPS */
 .soaps{
     background-color: rgba(255, 173, 217, 0);
@@ -267,8 +306,8 @@ body{
     grid-column-start: 2;
     grid-column-end: -2;
 
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 8;
+    grid-row-end: 9;
 
     display: grid;
 
