@@ -31,3 +31,16 @@ $(document).scroll(function () {
         });
     } 
 });
+
+$(window).scroll(function(){
+    var scroll_position = $(window).scrollTop();
+    $('.soap__box--bordertop').css({
+        'background-position-x': + scroll_position + 'px',
+    })
+    $('.soap__box--borderbot').css({
+        'background-position-x': + scroll_position + 'px',
+    })
+    $('.soap__box').css({
+        'background-position-x': + scroll_position + 'px',
+    })
+})
