@@ -601,6 +601,9 @@ body{
     grid-template-columns: max-content max-content max-content;
     grid-template-rows: min-content min-content;
 
+    grid-column-gap: -0.4rem;
+
+    align-content: center;
 }
 
 .foot__title--1{
@@ -631,11 +634,10 @@ body{
 
     align-self: end;
 
-    transform: translateY(-0.5rem);
 }
 
 .foot__link--1{
-    letter-spacing: 0.01rem;
+    letter-spacing: 0rem;
 
     grid-column-start: 2;
     grid-column-end: 3;
@@ -650,12 +652,16 @@ body{
 
 .foot__mail--1{
     font-size: 1.5rem;
-    letter-spacing: 0.45rem;
+    letter-spacing: 0.48rem;
 
-    transform: translateX(0.5rem);
+    justify-self: end;
+    transform: translateX(0.2rem);
 
     grid-column-start: 1;
     grid-column-end: 2;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 .foot__title-des{
@@ -686,11 +692,10 @@ body{
 
     align-self: end;
 
-    transform: translateY(-0.5rem);
 }
 
 .foot-link-des--1{
-    letter-spacing: 0.01rem;
+    letter-spacing: 0.42rem;
 
     grid-column-start: 2;
     grid-column-end: 3;
@@ -705,7 +710,9 @@ body{
 
 .foot__mail-des{
     font-size: 1.5rem;
-    letter-spacing: 0.45rem;
+    letter-spacing: 0.33rem;
+
+    justify-self: start;
 
     transform: translateX(0.5rem);
 
