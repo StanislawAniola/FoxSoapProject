@@ -603,6 +603,9 @@ body{
     grid-template-columns: min-content min-content;
     grid-template-rows: min-content min-content max-content;
 
+    grid-column-gap: -0.4rem;
+
+    align-content: center;
 }
 
 .foot__nested{
