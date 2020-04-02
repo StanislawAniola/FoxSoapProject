@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="../css/trillo_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="../img_trillo/logo.png" alt="trillo logo" class="logo">
+
+            <form action="" class="search">
+                <input type="text" class="search__input" placeholder="swarch hotels">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="../img_trillo/search.svg"></use>
+                    </svg>
+                </button>
+            </form>
+
+            <nav class="user-nav">
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="../img_trillo/bookmark.svg"></use>
+                        <span class="user-nav__notification">7</span>
+                    </svg>
+                </div>
+                
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="../img_trillo/chatbox.svg"></use>
+                        <span class="user-nav__notification">13</span>
+                    </svg>
+                </div>
+
+                <div class="user-nav__icon-box">
+                    <div class="user-nav__user">
+                        <img src="../img_trillo/user.jpg" alt="User photo" class="user-nav__user-photo">
+                        <span class="user-nav__user-name">Jonas</span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content">
+            <nav class="sidebar">
+                <ul class="side-nav">
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="../img_trillo/home.svg"></use>
+                            </svg>
+                            <span>Hotel</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="hotel-view">
+                Hotem
+            </main>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</body>
+</html>
