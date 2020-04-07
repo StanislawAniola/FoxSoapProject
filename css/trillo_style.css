@@ -86,17 +86,61 @@ body{
 
 /* SIDEBAR */
 .sidebar{
-    background-color: var(--color-grey-light-1);
+    background-color: var(--color-grey-dark-1);
     flex-grow: 0; /* defines how much element will grow compare to others  */
     flex-shrink: 0; /* defines how much elemnt will shrink compare to others */
     flex-basis: 18%; /* how big to others element is */
+
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.side-nav{
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+}
+
+.side-nav__item{
+}
+
+.side-nav__link{
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.side-nav__link:link,
+.side-nav:visited{
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+}
+
+.side-nav__icon{
+    width: 1.75rem;
+    height: 1.75rem;
+
+    margin-right: 2rem;
+    fill: currentColor; /*color of the parrent element*/
 }
 /* END SIDEBAR */
 
 /* HOTEL-VIEW */
 .hotel-view{
     background-color: #fff;
-    background-color: orangered;
+    background-color: orangered; /*test*/
+
+    height: 80rem; /*test*/
 
     flex-grow: 1;
 }
@@ -239,3 +283,13 @@ body{
 }
 /* END USER NAVIGATION */
 /* END COMPONENTS */
+
+/* LEGAL */
+.legal{
+    padding: 2.5rem;
+    
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+}
+/* END LEGAL */
